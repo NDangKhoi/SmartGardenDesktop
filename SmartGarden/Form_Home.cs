@@ -39,7 +39,7 @@ namespace SmartGarden
         }
         private void btn_Home_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new Form_Login());
+            
         }
 
         private void btn_LogOut_Click(object sender, EventArgs e)
@@ -51,6 +51,11 @@ namespace SmartGarden
                     Application.Restart();
                     break;
             }
+        }
+
+        private void btn_History_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new Form_History());
         }
     }
 }

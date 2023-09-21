@@ -31,11 +31,11 @@ namespace SmartGarden
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Home));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.btn_Home = new System.Windows.Forms.Button();
-            this.btn_Chart = new System.Windows.Forms.Button();
-            this.btn_History = new System.Windows.Forms.Button();
             this.btn_LogOut = new System.Windows.Forms.Button();
+            this.btn_History = new System.Windows.Forms.Button();
+            this.btn_Chart = new System.Windows.Forms.Button();
+            this.btn_Home = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.panel_Desktop = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -54,13 +54,52 @@ namespace SmartGarden
             this.panel1.Size = new System.Drawing.Size(196, 530);
             this.panel1.TabIndex = 0;
             // 
-            // panel2
+            // btn_LogOut
             // 
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(196, 100);
-            this.panel2.TabIndex = 0;
+            this.btn_LogOut.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.btn_LogOut.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btn_LogOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_LogOut.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_LogOut.Image = ((System.Drawing.Image)(resources.GetObject("btn_LogOut.Image")));
+            this.btn_LogOut.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_LogOut.Location = new System.Drawing.Point(0, 482);
+            this.btn_LogOut.Name = "btn_LogOut";
+            this.btn_LogOut.Size = new System.Drawing.Size(196, 48);
+            this.btn_LogOut.TabIndex = 5;
+            this.btn_LogOut.Text = "Sign Out";
+            this.btn_LogOut.UseVisualStyleBackColor = false;
+            this.btn_LogOut.Click += new System.EventHandler(this.btn_LogOut_Click);
+            // 
+            // btn_History
+            // 
+            this.btn_History.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.btn_History.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_History.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_History.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_History.Image = ((System.Drawing.Image)(resources.GetObject("btn_History.Image")));
+            this.btn_History.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_History.Location = new System.Drawing.Point(0, 196);
+            this.btn_History.Name = "btn_History";
+            this.btn_History.Size = new System.Drawing.Size(196, 48);
+            this.btn_History.TabIndex = 4;
+            this.btn_History.Text = "History";
+            this.btn_History.UseVisualStyleBackColor = false;
+            this.btn_History.Click += new System.EventHandler(this.btn_History_Click);
+            // 
+            // btn_Chart
+            // 
+            this.btn_Chart.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.btn_Chart.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_Chart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Chart.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Chart.Image = ((System.Drawing.Image)(resources.GetObject("btn_Chart.Image")));
+            this.btn_Chart.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_Chart.Location = new System.Drawing.Point(0, 148);
+            this.btn_Chart.Name = "btn_Chart";
+            this.btn_Chart.Size = new System.Drawing.Size(196, 48);
+            this.btn_Chart.TabIndex = 3;
+            this.btn_Chart.Text = "Chart";
+            this.btn_Chart.UseVisualStyleBackColor = false;
             // 
             // btn_Home
             // 
@@ -78,51 +117,13 @@ namespace SmartGarden
             this.btn_Home.UseVisualStyleBackColor = false;
             this.btn_Home.Click += new System.EventHandler(this.btn_Home_Click);
             // 
-            // btn_Chart
+            // panel2
             // 
-            this.btn_Chart.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.btn_Chart.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btn_Chart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Chart.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Chart.Image = ((System.Drawing.Image)(resources.GetObject("btn_Chart.Image")));
-            this.btn_Chart.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Chart.Location = new System.Drawing.Point(0, 148);
-            this.btn_Chart.Name = "btn_Chart";
-            this.btn_Chart.Size = new System.Drawing.Size(196, 48);
-            this.btn_Chart.TabIndex = 3;
-            this.btn_Chart.Text = "Chart";
-            this.btn_Chart.UseVisualStyleBackColor = false;
-            // 
-            // btn_History
-            // 
-            this.btn_History.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.btn_History.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btn_History.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_History.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_History.Image = ((System.Drawing.Image)(resources.GetObject("btn_History.Image")));
-            this.btn_History.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_History.Location = new System.Drawing.Point(0, 196);
-            this.btn_History.Name = "btn_History";
-            this.btn_History.Size = new System.Drawing.Size(196, 48);
-            this.btn_History.TabIndex = 4;
-            this.btn_History.Text = "History";
-            this.btn_History.UseVisualStyleBackColor = false;
-            // 
-            // btn_LogOut
-            // 
-            this.btn_LogOut.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.btn_LogOut.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.btn_LogOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_LogOut.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_LogOut.Image = ((System.Drawing.Image)(resources.GetObject("btn_LogOut.Image")));
-            this.btn_LogOut.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_LogOut.Location = new System.Drawing.Point(0, 482);
-            this.btn_LogOut.Name = "btn_LogOut";
-            this.btn_LogOut.Size = new System.Drawing.Size(196, 48);
-            this.btn_LogOut.TabIndex = 5;
-            this.btn_LogOut.Text = "Sign Out";
-            this.btn_LogOut.UseVisualStyleBackColor = false;
-            this.btn_LogOut.Click += new System.EventHandler(this.btn_LogOut_Click);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(196, 100);
+            this.panel2.TabIndex = 0;
             // 
             // panel_Desktop
             // 
