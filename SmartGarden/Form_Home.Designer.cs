@@ -51,7 +51,7 @@ namespace SmartGarden
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(196, 530);
+            this.panel1.Size = new System.Drawing.Size(196, 568);
             this.panel1.TabIndex = 0;
             // 
             // btn_LogOut
@@ -62,7 +62,7 @@ namespace SmartGarden
             this.btn_LogOut.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_LogOut.Image = ((System.Drawing.Image)(resources.GetObject("btn_LogOut.Image")));
             this.btn_LogOut.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_LogOut.Location = new System.Drawing.Point(0, 482);
+            this.btn_LogOut.Location = new System.Drawing.Point(0, 520);
             this.btn_LogOut.Name = "btn_LogOut";
             this.btn_LogOut.Size = new System.Drawing.Size(196, 48);
             this.btn_LogOut.TabIndex = 5;
@@ -100,6 +100,7 @@ namespace SmartGarden
             this.btn_Chart.TabIndex = 3;
             this.btn_Chart.Text = "Chart";
             this.btn_Chart.UseVisualStyleBackColor = false;
+            this.btn_Chart.Click += new System.EventHandler(this.btn_Chart_Click);
             // 
             // btn_Home
             // 
@@ -130,7 +131,7 @@ namespace SmartGarden
             this.panel_Desktop.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel_Desktop.Location = new System.Drawing.Point(196, 0);
             this.panel_Desktop.Name = "panel_Desktop";
-            this.panel_Desktop.Size = new System.Drawing.Size(693, 530);
+            this.panel_Desktop.Size = new System.Drawing.Size(735, 568);
             this.panel_Desktop.TabIndex = 1;
             // 
             // Form_Home
@@ -138,11 +139,13 @@ namespace SmartGarden
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(82)))));
-            this.ClientSize = new System.Drawing.Size(889, 530);
+            this.ClientSize = new System.Drawing.Size(931, 568);
             this.Controls.Add(this.panel_Desktop);
             this.Controls.Add(this.panel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form_Home";
-            this.Text = "FormHome";
+            this.Text = "Smart Garden";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 

@@ -9,9 +9,9 @@ namespace SmartGarden
 {
     class history_Json
     {
-        [JsonProperty("Date")]
+        //[JsonProperty("Date")]
         public string Date { get; set; }
-
+        
         [JsonProperty("Time")]
         public string Time { get; set; }
 
@@ -31,7 +31,7 @@ namespace SmartGarden
         public string Stepper { get; set; }
 
         [JsonProperty("Humidity")]
-        public string Humidity { get; set; }
+        public string Humi { get; set; }
 
         [JsonProperty("Light")]
         public string Light { get; set; }
@@ -43,10 +43,10 @@ namespace SmartGarden
         public string Soil { get; set; }
 
         [JsonProperty("Temperature")]
-        public string Temperature { get; set; }
+        public string Temp { get; set; }
 
-        [JsonProperty("Reset")]
-        public bool Reset { get; set; }
+        //[JsonProperty("Reset")]
+        //public bool Reset { get; set; }
 
     }
 }
