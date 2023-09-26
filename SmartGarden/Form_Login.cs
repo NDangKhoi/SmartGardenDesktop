@@ -58,10 +58,9 @@ namespace SmartGarden
                 return;
             }
             MessageBox.Show("Successfully Login");
-            
-            
-            Thread _Thread = new Thread(new ThreadStart(_Show));
-            _Thread.Start();
+
+            this.Hide();
+            _Show();
             this.Close();
         }
         private void _Show()

@@ -60,12 +60,8 @@ namespace SmartGarden
             dtgv_history.DataSource = json_Respone;
             
         }
-        ojbJson json = new ojbJson();
         private void button1_Click(object sender, EventArgs e)
-        {
-
-            
-            
+        { 
             var obj = jss.Deserialize<dynamic>(resContent);
             var len = obj.Length;
             List<history_Json> json_Respone1 = new List<history_Json>();
@@ -89,8 +85,9 @@ namespace SmartGarden
                         Stepper = obj[i]["Stepper"],
                         Temp = obj[i]["Temperature"]
                     };
-                    json_Respone1.Add(data);                    
+                    json_Respone1.Add(data);                 
                 }
+                
             }
             dtgv_history.DataSource = json_Respone1;
         }
