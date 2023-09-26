@@ -67,6 +67,7 @@ namespace SmartGarden
             chart_soil.ChartAreas[0].AxisX.Minimum = chart_soil.Series[0].Points[0].XValue;
             chart_soil.ChartAreas[0].AxisY.Maximum = Convert.ToInt32(data.Soil) + 10;
             #endregion
+
         }
 
         private void Form1_Chart_Load(object sender, EventArgs e)
