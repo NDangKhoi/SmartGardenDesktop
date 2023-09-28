@@ -32,6 +32,8 @@ namespace SmartGarden
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Login));
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.pic_hide = new System.Windows.Forms.PictureBox();
+            this.pic_visible = new System.Windows.Forms.PictureBox();
             this.linkLabel2 = new System.Windows.Forms.LinkLabel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -46,6 +48,8 @@ namespace SmartGarden
             this.btnExit = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_hide)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_visible)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -66,6 +70,8 @@ namespace SmartGarden
             // 
             this.panel2.BackColor = System.Drawing.Color.Transparent;
             this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.panel2.Controls.Add(this.pic_hide);
+            this.panel2.Controls.Add(this.pic_visible);
             this.panel2.Controls.Add(this.linkLabel2);
             this.panel2.Controls.Add(this.pictureBox2);
             this.panel2.Controls.Add(this.pictureBox1);
@@ -79,6 +85,30 @@ namespace SmartGarden
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(344, 329);
             this.panel2.TabIndex = 12;
+            // 
+            // pic_hide
+            // 
+            this.pic_hide.BackColor = System.Drawing.Color.White;
+            this.pic_hide.Image = ((System.Drawing.Image)(resources.GetObject("pic_hide.Image")));
+            this.pic_hide.Location = new System.Drawing.Point(256, 164);
+            this.pic_hide.Name = "pic_hide";
+            this.pic_hide.Size = new System.Drawing.Size(27, 19);
+            this.pic_hide.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pic_hide.TabIndex = 14;
+            this.pic_hide.TabStop = false;
+            this.pic_hide.Click += new System.EventHandler(this.pic_hide_Click);
+            // 
+            // pic_visible
+            // 
+            this.pic_visible.BackColor = System.Drawing.Color.White;
+            this.pic_visible.Image = ((System.Drawing.Image)(resources.GetObject("pic_visible.Image")));
+            this.pic_visible.Location = new System.Drawing.Point(256, 164);
+            this.pic_visible.Name = "pic_visible";
+            this.pic_visible.Size = new System.Drawing.Size(27, 19);
+            this.pic_visible.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pic_visible.TabIndex = 13;
+            this.pic_visible.TabStop = false;
+            this.pic_visible.Click += new System.EventHandler(this.pic_visible_Click);
             // 
             // linkLabel2
             // 
@@ -113,9 +143,10 @@ namespace SmartGarden
             // linkForgot
             // 
             this.linkForgot.AutoSize = true;
+            this.linkForgot.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkForgot.Location = new System.Drawing.Point(118, 197);
             this.linkForgot.Name = "linkForgot";
-            this.linkForgot.Size = new System.Drawing.Size(95, 15);
+            this.linkForgot.Size = new System.Drawing.Size(107, 17);
             this.linkForgot.TabIndex = 7;
             this.linkForgot.TabStop = true;
             this.linkForgot.Text = "Forgot Password";
@@ -124,6 +155,7 @@ namespace SmartGarden
             // Btn_Login
             // 
             this.Btn_Login.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_Login.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btn_Login.Location = new System.Drawing.Point(90, 226);
             this.Btn_Login.Name = "Btn_Login";
             this.Btn_Login.Size = new System.Drawing.Size(152, 28);
@@ -135,9 +167,10 @@ namespace SmartGarden
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(47, 144);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(57, 15);
+            this.label4.Size = new System.Drawing.Size(64, 17);
             this.label4.TabIndex = 6;
             this.label4.Text = "Password";
             // 
@@ -147,13 +180,15 @@ namespace SmartGarden
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(236, 23);
             this.txtPassword.TabIndex = 5;
+            this.txtPassword.UseSystemPasswordChar = true;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(47, 88);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(36, 15);
+            this.label3.Size = new System.Drawing.Size(39, 17);
             this.label3.TabIndex = 4;
             this.label3.Text = "Email";
             // 
@@ -217,6 +252,8 @@ namespace SmartGarden
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_hide)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_visible)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
@@ -241,6 +278,8 @@ namespace SmartGarden
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.LinkLabel linkLabel2;
+        private System.Windows.Forms.PictureBox pic_hide;
+        private System.Windows.Forms.PictureBox pic_visible;
     }
 }
 

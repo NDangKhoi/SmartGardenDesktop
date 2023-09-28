@@ -36,8 +36,8 @@ namespace SmartGarden
             this.btn_Chart = new System.Windows.Forms.Button();
             this.btn_Home = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.panel_Desktop = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel_Desktop = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -130,14 +130,6 @@ namespace SmartGarden
             this.panel2.Size = new System.Drawing.Size(196, 100);
             this.panel2.TabIndex = 0;
             // 
-            // panel_Desktop
-            // 
-            this.panel_Desktop.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel_Desktop.Location = new System.Drawing.Point(196, 0);
-            this.panel_Desktop.Name = "panel_Desktop";
-            this.panel_Desktop.Size = new System.Drawing.Size(735, 568);
-            this.panel_Desktop.TabIndex = 1;
-            // 
             // pictureBox1
             // 
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -148,6 +140,15 @@ namespace SmartGarden
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            // 
+            // panel_Desktop
+            // 
+            this.panel_Desktop.AutoScroll = true;
+            this.panel_Desktop.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel_Desktop.Location = new System.Drawing.Point(196, 0);
+            this.panel_Desktop.Name = "panel_Desktop";
+            this.panel_Desktop.Size = new System.Drawing.Size(735, 568);
+            this.panel_Desktop.TabIndex = 1;
             // 
             // Form_Home
             // 

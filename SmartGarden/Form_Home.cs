@@ -73,7 +73,7 @@ namespace SmartGarden
 
         private void btn_Chart_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new Form1_Chart());
+            OpenChildForm(new Form_Chart());
         }
     }
 }

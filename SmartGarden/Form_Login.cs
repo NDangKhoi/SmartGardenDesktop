@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Threading;
+using FirebaseAdmin.Auth;
 
 namespace SmartGarden
 {
@@ -17,9 +18,10 @@ namespace SmartGarden
         {
             InitializeComponent();
         }
+        #region Set up
         private const int WM_NCLBUTTONDOWN = 0xA1;
         private const int HT_CAPTION = 0x2;
-
+       
         [System.Runtime.InteropServices.DllImport("user32.dll")]
         private static extern int SendMessage(IntPtr hWnd, int Msg, int wParam, int lParam);
         [System.Runtime.InteropServices.DllImport("user32.dll")]
@@ -42,7 +44,7 @@ namespace SmartGarden
                 }
             }
         }
-
+        #endregion
         private void Btn_Login_Click(object sender, EventArgs e)
         {
             if(txtEmail.Text == "")
@@ -71,6 +73,25 @@ namespace SmartGarden
         private void linkForgot_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             System.Diagnostics.Process.Start("https://ndangkhoi.github.io/My-garden/html/forgotpage.html");
+        }
+
+        private void pic_hide_Click(object sender, EventArgs e)
+        {
+            txtPassword.UseSystemPasswordChar = false;
+            pic_hide.Hide();
+            pic_visible.Show();
+        }
+
+        private void pic_visible_Click(object sender, EventArgs e)
+        {
+            txtPassword.UseSystemPasswordChar = true;
+            pic_hide.Show();
+            pic_visible.Hide();
+        }
+
+        void Start()
+        {
+            
         }
     }
 }
